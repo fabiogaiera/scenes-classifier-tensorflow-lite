@@ -6,7 +6,15 @@ app = FastAPI()
 
 @app.get("/", response_class=HTMLResponse)
 async def main():
-    content = """
+    content = head_html + """
     <marquee width="525" behavior="alternate"><h1 style="color:red;font-family:Arial">Please Upload Your Scenes!</h1></marquee>
     """
     return content
+
+
+
+head_html = """
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+"""
