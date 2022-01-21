@@ -37,7 +37,7 @@ During the training, for each epoch, the model with the best accuracy is saved, 
 
 ## The **FastAPI** application
 
-
+## Deployment on Heroku
 
 ## Sources:
 
