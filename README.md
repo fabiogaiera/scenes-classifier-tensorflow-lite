@@ -1,13 +1,11 @@
 # Awesome Toy Classifier
 
-TensorFlow | Keras | FastAPI | Heroku | CNN
-
 Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. 
 
 - Do I skip any fine grained steps? **Yes, of course!**
-- Do I merge steps (1 step that include 2 smaller steps)? **Yes, of course!** 
+- Do I merge steps (1 step that includes 2 or 3 smaller steps)? **Yes, of course!** 
 
-And that is because my purpose is to show an example that can be shareable in a LinkedIn post. 
+And that is because my purpose is to show an example that can be shareable in a LinkedIn post with its limitations.
 
 The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)* available for final users is the outcome of the following steps:
 
@@ -18,10 +16,35 @@ The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)
 
 ## The dataset: 
 
-I am going to use the so called `Intel Image Classification`. I do not know certainly whether comes from Intel or not. However, It is widely named like that in Kaggle and other sources.  
+I am going to use the so-called `Intel Image Classification`. I do not know certainly whether comes from Intel or not. However, It is widely named like that in Kaggle and other sources.  
 
 Some facts about the `dataset` folder on this repository:
 
-- It contains 6 classes: building, forest, glacier, mountain, sea and street.
+- It contains 6 categories: building, forest, glacier, mountain, sea and street.
+- It has been slightly modified: each category contains exactly the same quantity of elements (2190 images). In the original dataset, categories are unbalanced.
 - Each element within this dataset is an image of 150px x 150px
-- There are 3 folders: test, validation and training. test folder contain 7300 images that can be used for testing the model with new data. training folder and validation folder are used during **model training** step. Each category contains 2190 images.
+- There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used for training the model.
+
+## The **Image Classification** notebook
+
+By running this notebook, I am executing the steps
+
+- Data Preprocessing
+- Model Development And Training
+- Prediction On New Data
+
+During the training, for each epoch, the model with the best accuracy is saved, and it will overwrite the precedent model. The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier.
+
+## The **FastAPI** application
+
+
+
+## Sources:
+
+- [Transfer learning and fine-tuning from TensorFlow](https://www.tensorflow.org/tutorials/images/transfer_learning)
+
+- [Keras](https://keras.io)
+
+- [FastAPI documentation](https://fastapi.tiangolo.com)
+
+- [Heroku Dev Center](https://devcenter.heroku.com)
