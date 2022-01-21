@@ -2,15 +2,14 @@
 
 TensorFlow | Keras | FastAPI | Heroku | CNN
 
-Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. Do I skip any fine grained steps? Yes, of course! And that is because my purpose is to show an example that can be shareable in a LinkedIn post. 
+Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. Do I skip any fine grained steps? Do I merge steps (1 step that include 2 smaller steps)? Yes, of course! And that is because my purpose is to show an example that can be shareable in a LinkedIn post. 
 
 The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)* available for final users is the outcome of the following steps:
 
 - Data Preprocessing
-- Model development
-- Model training
-- Model evaluation
-- Model Deployment  
+- Model Development And Training
+- Prediction On New Data
+- Model Deployment
 
 
 
@@ -22,4 +21,4 @@ Some facts about the dataset:
 
 - It contains 6 classes: building, forest, glacier, mountain, sea and street.
 - Each element within this dataset is an image of 150px x 150px
-- There are 3 folders: test, validation and training. test folder contain 7300 images that can be used for testing the model with new data. training folder and validation folder are used during **model training** step.
+- There are 3 folders: test, validation and training. test folder contain 7300 images that can be used for testing the model with new data. training folder and validation folder are used during **model training** step. Each category contains 2190 images.
