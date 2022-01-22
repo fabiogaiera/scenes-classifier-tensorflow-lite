@@ -16,7 +16,7 @@ The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)
 
 ## The dataset: 
 
-I am going to use the so-called `Intel Image Classification`. I do not know certainly whether comes from Intel or not. However, It is widely named like that in Kaggle and other sources.  
+I am going to use the so-called `Intel Image Classification`. I do not know certainly whether it comes from Intel or not. However, It is widely named like that in Kaggle and other sources.  
 
 Some facts about the `dataset` folder on this repository:
 
@@ -25,21 +25,26 @@ Some facts about the `dataset` folder on this repository:
 - Each element within this dataset is an image of 150px x 150px
 - There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used for training the model.
 
-## The `Image Classification` notebook
+## The `Model Creation` notebook
 
 By running this notebook, I am executing the steps
 
 - Data Preprocessing
 - Model Development And Training
+
+The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier. The model is saved for future usage.
+
+## The `Model Prediction` notebook
+
+By running this notebook, I am executing the step
+
 - Prediction On New Data
 
-The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier. I save this entire model for future usage (When the application is deployed).
-
-## The `Upload the saved model for predicting new images` notebook
-
-By running this notebook, I am just verifying how to load a saved model and use it for predictions.
+You can see how to load a saved model and use it for predictions.
 
 ## The `FastAPI` application
+
+Definitely FastAPI is a great framework for building web applications faster. So, I chose it for creating an app that allows you to upload and classify images within those 6 categories I mentioned before. 
 
 ## Deployment on Heroku
 
