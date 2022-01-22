@@ -5,7 +5,7 @@ Hereby I am going to show a simple example that includes the most important step
 - Do I skip any fine grained steps? **Yes, of course!**
 - Do I merge steps (1 step that includes 2 or 3 smaller steps)? **Yes, of course!** 
 
-And that is because my purpose is to show an example that can be shareable in a LinkedIn post with its limitations.
+And this is because my purpose is to show an example that can be shareable in a LinkedIn post with its limitations.
 
 The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)* available for final users is the outcome of the following steps:
 
@@ -33,7 +33,11 @@ By running this notebook, I am executing the steps
 - Model Development And Training
 - Prediction On New Data
 
-During the training, for each epoch, the model with the best accuracy is saved, and it will overwrite the precedent model. The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier.
+The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier. I save this entire model for future usage (When the application is deployed).
+
+## The **Upload the saved model for predicting new images** 
+
+By running this notebook, I am just verifying how to load a saved model and use it for predictions.
 
 ## The **FastAPI** application
 
@@ -42,6 +46,8 @@ During the training, for each epoch, the model with the best accuracy is saved, 
 ## Sources:
 
 - [Transfer learning and fine-tuning from TensorFlow](https://www.tensorflow.org/tutorials/images/transfer_learning)
+
+-[Save and load models from TensorFlow](https://www.tensorflow.org/tutorials/keras/save_and_load)
 
 - [Keras](https://keras.io)
 
