@@ -25,7 +25,7 @@ Some facts about the `dataset` folder on this repository:
 - Each element within this dataset is an image of 150px x 150px
 - There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used for training the model.
 
-## The **Image Classification** notebook
+## The `Image Classification` notebook
 
 By running this notebook, I am executing the steps
 
@@ -35,11 +35,11 @@ By running this notebook, I am executing the steps
 
 The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier. I save this entire model for future usage (When the application is deployed).
 
-## The **Upload the saved model for predicting new images** 
+## The `Upload the saved model for predicting new images` notebook
 
 By running this notebook, I am just verifying how to load a saved model and use it for predictions.
 
-## The **FastAPI** application
+## The `FastAPI` application
 
 ## Deployment on Heroku
 
