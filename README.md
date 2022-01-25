@@ -21,7 +21,6 @@ I am going to use the so-called `Intel Image Classification`. I do not know cert
 Some facts about the `dataset` folder on this repository:
 
 - It contains 6 categories: building, forest, glacier, mountain, sea and street.
-- It has been slightly modified: each category contains exactly the same quantity of elements (2190 images). In the original dataset, categories are unbalanced.
 - Each element within this dataset is an image of 150px x 150px
 - There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used for training the model.
 
