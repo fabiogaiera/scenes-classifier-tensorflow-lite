@@ -16,7 +16,7 @@ The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)
 
 ## The dataset: 
 
-I am going to use the so-called `Intel Image Classification`. I do not know certainly whether it comes from Intel or not. However, It is widely named like that in Kaggle and other sources.  
+I am going to use the so-called `Intel Image Classification`. I do not know certainly whether it belongs to Intel or not, however it is widely named like that in Kaggle and other sources.
 
 Some facts about the `dataset` folder on this repository:
 
@@ -49,11 +49,11 @@ Definitely FastAPI is a great framework for building web applications faster. So
 
 ## Sources:
 
-- [Transfer learning and fine-tuning from TensorFlow](https://www.tensorflow.org/tutorials/images/transfer_learning)
+- [Transfer learning and fine-tuning](https://www.tensorflow.org/tutorials/images/transfer_learning)
 
--[Save and load models from TensorFlow](https://www.tensorflow.org/tutorials/keras/save_and_load)
+- [Image classification](https://www.tensorflow.org/tutorials/images/classification)
 
-- [Keras](https://keras.io)
+- [Save and load models from TensorFlow](https://www.tensorflow.org/tutorials/keras/save_and_load)
 
 - [FastAPI documentation](https://fastapi.tiangolo.com)
 
