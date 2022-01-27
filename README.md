@@ -1,11 +1,11 @@
-# Awesome Toy Classifier
+# When Machine Learning models not only settle down  
 
 Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. 
 
 - Do I skip any fine grained steps? **Yes, of course!**
 - Do I merge steps (1 step that includes 2 or 3 smaller steps)? **Yes, of course!** 
 
-And this is because my purpose is to show an example that can be shareable in a LinkedIn post with its limitations.
+And this is because my purpose is to show an example that can be shareable in a post with its known limitations.
 
 The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)* available for final users is the outcome of the following steps:
 
@@ -31,21 +31,34 @@ By running this notebook, I am executing the steps
 - Data Preprocessing
 - Model Development And Training
 
-The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for a toy classifier. The model is saved for future usage.
+The model gets an accuracy of over than 0.9 approximately, which is perfectly acceptable for an example. The model is saved for future usage in two different formats: SavedModel format and TensorFlow Lite format.
 
-## The `Model Prediction` notebook
+
+## The `Model Prediction With Tensorflow` notebook
 
 By running this notebook, I am executing the step
 
 - Prediction On New Data
 
-You can see how to load a saved model and use it for predictions.
+You can see how to load a model build with SavedModel format and use it for predictions.
 
-## The `FastAPI` application
+## The `Model Prediction With Tensorflow Lite` notebook
 
-Definitely FastAPI is a great framework for building web applications faster. So, I chose it for creating an app that allows you to upload and classify images within those 6 categories I mentioned before. 
+By running this notebook, I am executing the step
+
+- Prediction On New Data
+
+You can see how to load a model built with TensorFlow Lite format and use it for predictions.
+
+## The application built with `FastAPI`
+
+Definitely FastAPI is a great framework for building web applications faster. So, I chose it for creating an app that allows you to upload and classify images within those 6 categories I mentioned before. The whole application is written in `main.py` file.
 
 ## Deployment on Heroku
+
+Here we 
+
+
 
 ## Sources:
 
@@ -53,7 +66,9 @@ Definitely FastAPI is a great framework for building web applications faster. So
 
 - [Image classification](https://www.tensorflow.org/tutorials/images/classification)
 
-- [Save and load models from TensorFlow](https://www.tensorflow.org/tutorials/keras/save_and_load)
+- [Save and load models](https://www.tensorflow.org/tutorials/keras/save_and_load)
+
+- [TensorFlow Lite inference](https://www.tensorflow.org/lite/guide/inference)
 
 - [FastAPI documentation](https://fastapi.tiangolo.com)
 
