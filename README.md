@@ -22,7 +22,7 @@ Some facts about the `dataset` folder on this repository:
 
 - It contains 6 categories: building, forest, glacier, mountain, sea and street.
 - Each element within this dataset is an image of 150px x 150px
-- There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used during the model training.
+- There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data whereas training folder and validation folder are used during the model training.
 
 ## The `Model Creation` notebook
 
@@ -56,7 +56,7 @@ Definitely FastAPI is a great framework for building web applications faster. So
 
 ## Deployment on Heroku
 
-Since I am using the **Free and Hobby** account, the main goal is to save space due the limitations of this account! A way of showing this MVP is to use TensorFlow Lite, which helps saving significant space when installing libraries.
+Since I am using the **Free and Hobby** account, the main goal is to save space due its limitations. A way of doing that is using TensorFlow Lite, which helps saving significant space when installing libraries. I fully recommend to include the .slugignore file for saving space.
 
 ## Sources:
 
@@ -65,6 +65,10 @@ Since I am using the **Free and Hobby** account, the main goal is to save space 
 - [Image classification](https://www.tensorflow.org/tutorials/images/classification)
 
 - [Save and load models](https://www.tensorflow.org/tutorials/keras/save_and_load)
+
+- [TensorFlow Lite converter](https://www.tensorflow.org/lite/convert)
+
+- [Python quick start with TensorFlow Lite](https://www.tensorflow.org/lite/guide/python)
 
 - [TensorFlow Lite inference](https://www.tensorflow.org/lite/guide/inference)
 
