@@ -8,6 +8,8 @@ pip install fastapi
 
 pip install uvicorn
 
+pip install gunicorn
+
 pip install opencv-python
 
 pip install tflite-runtime
