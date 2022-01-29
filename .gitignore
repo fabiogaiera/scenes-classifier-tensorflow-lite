@@ -1,5 +1,7 @@
-__pycache__/
-.idea/
 .env/
-.ipynb_checkpoints/
+.envtflite/
+.idea/
+__pycache__/
 SavedModel/
+
+.ipynb_checkpoints/
