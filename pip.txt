@@ -1,1 +1,17 @@
-pip install tensorflow=2.6.0
+python -m venv .tflite-env
+
+.tflite-env\Scripts\activate
+
+pip install --upgrade pip
+
+pip install fastapi
+
+pip install uvicorn
+
+pip install opencv-python
+
+pip install tflite-runtime
+
+pip install pillow
+
+pip install python-multipart
