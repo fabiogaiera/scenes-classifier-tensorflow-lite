@@ -1,5 +1,5 @@
 import io
-import cv2
+#import cv2
 import numpy as np
 import tflite_runtime.interpreter as tflite
 
@@ -55,14 +55,10 @@ async def render_predictions(files: List[UploadFile] = File(...)):
     for image, name in zip(pillow_images, names):
         path = 'static/' + name
         image.save(path)
-        
-        # Convert image to NumPy array
-        img_array = cv2.imread(path)
-        img_array = cv2.cvtColor(img_array, cv2.COLOR_BGR2RGB) 
-        
-        predicted_class = predict(img_array)
-        predictions.append(predicted_class)
         image_paths.append(path)
+        
+        predicted_class = predict(image)
+        predictions.append(predicted_class)
 
     column_labels = ["Image", "Prediction"]
 
@@ -74,7 +70,7 @@ async def render_predictions(files: List[UploadFile] = File(...)):
 def predict(image):
     # [1 150 150 3]
     input_shape = input_details[0]['shape']
-    input_data = image.reshape(input_shape).astype(np.float32)
+    input_data = np.array(image).reshape(input_shape).astype(np.float32)
     interpreter.set_tensor(input_details[0]['index'], input_data)
     interpreter.invoke()
     output_data = interpreter.get_tensor(output_details[0]['index']).reshape(6, )
