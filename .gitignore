@@ -1,6 +1,6 @@
-.env/
-.tflite-env/
 .idea/
+.tf-env/
+.tflite-env/
 __pycache__/
 SavedModel/
 

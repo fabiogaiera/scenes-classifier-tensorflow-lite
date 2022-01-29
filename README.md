@@ -56,9 +56,7 @@ Definitely FastAPI is a great framework for building web applications faster. So
 
 ## Deployment on Heroku
 
-Since I am using the **Free and Hobby** account, the main goal is to save space! A way of showing this MVP is to use TensorFlow Lite, which helps to save significant space when installing libraries.
-
-
+Since I am using the **Free and Hobby** account, the main goal is to save space due the limitations of this account! A way of showing this MVP is to use TensorFlow Lite, which helps saving significant space when installing libraries.
 
 ## Sources:
 
