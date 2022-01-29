@@ -1,4 +1,4 @@
-# When Machine Learning models not only settle down  
+# Image Classification  
 
 Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. 
 
@@ -22,7 +22,7 @@ Some facts about the `dataset` folder on this repository:
 
 - It contains 6 categories: building, forest, glacier, mountain, sea and street.
 - Each element within this dataset is an image of 150px x 150px
-- There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used for training the model.
+- There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data. training folder and validation folder are used during the model training.
 
 ## The `Model Creation` notebook
 
@@ -56,7 +56,7 @@ Definitely FastAPI is a great framework for building web applications faster. So
 
 ## Deployment on Heroku
 
-Here we 
+Since I am using the **Free and Hobby** account, the main goal is to save space! A way of showing this MVP is to use TensorFlow Lite, which helps to save significant space when installing libraries.
 
 
 

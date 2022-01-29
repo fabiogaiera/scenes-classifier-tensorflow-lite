@@ -1,4 +1,4 @@
-.env/
+.tf-env/
 .tflite-env/
 .git/
 .idea/

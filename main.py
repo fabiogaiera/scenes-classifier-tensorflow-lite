@@ -1,5 +1,4 @@
 import io
-#import cv2
 import numpy as np
 import tflite_runtime.interpreter as tflite
 
@@ -66,6 +65,7 @@ async def render_predictions(files: List[UploadFile] = File(...)):
            table_tag(image_paths, predictions,
                      column_labels) + form_prediction_tag + body_center_close_tag + html_close_tag
 
+# Prediction with TensorFlow Lite
 
 def predict(image):
     # [1 150 150 3]
@@ -92,7 +92,7 @@ marquee_home_tag = """<marquee width="680" behavior="scroll"><h1 style="color:bl
 form_tag = """
             <form action="/predictions/" enctype="multipart/form-data" method="post">
                 <input name="files" type="file" multiple>
-                <input type="submit" value="Predict!">
+                <input type="submit">
             </form>
            """
 
@@ -103,7 +103,6 @@ html_close_tag = """</html>"""
 marquee_prediction_tag = """<marquee width="680" behavior="scroll"><h1 style="color:blue;font-family:Arial">The predictions are as follows</h1></marquee>"""
 
 form_prediction_tag = """<br><form method="post" action="/"><button type="submit">Home</button></form>"""
-
 
 # Dynamic tag
 
