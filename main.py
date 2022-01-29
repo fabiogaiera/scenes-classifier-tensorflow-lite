@@ -1,6 +1,7 @@
 import io
+import cv2
 import numpy as np
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
 
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import HTMLResponse
@@ -10,7 +11,7 @@ from typing import List
 
 # TensorFlow Lite initialization
 
-interpreter = tf.lite.Interpreter(model_path='static/model/model.tflite')
+interpreter = tflite.Interpreter(model_path='static/model/model.tflite')
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
@@ -36,23 +37,33 @@ def main():
 
 @app.post("/predictions/", response_class=HTMLResponse)
 async def render_predictions(files: List[UploadFile] = File(...)):
+    
     pillow_images = []
     predictions = []
+    image_paths = []
+
     new_size = (150, 150)
 
     for file in files:
         f = await file.read()
         img = Image.open(io.BytesIO(f)).resize(new_size)
         pillow_images.append(img)
-        predicted_class = predict(img)
-        predictions.append(predicted_class)
+       
 
     names = [file.filename for file in files]
 
     for image, name in zip(pillow_images, names):
-        image.save('static/' + name)
+        path = 'static/' + name
+        image.save(path)
+        
+        # Convert image to NumPy array
+        img_array = cv2.imread(path)
+        img_array = cv2.cvtColor(img_array, cv2.COLOR_BGR2RGB) 
+        
+        predicted_class = predict(img_array)
+        predictions.append(predicted_class)
+        image_paths.append(path)
 
-    image_paths = ['static/' + name for name in names]
     column_labels = ["Image", "Prediction"]
 
     return html_open_tag + head_tag + body_center_open_tag + marquee_prediction_tag + \
@@ -63,7 +74,7 @@ async def render_predictions(files: List[UploadFile] = File(...)):
 def predict(image):
     # [1 150 150 3]
     input_shape = input_details[0]['shape']
-    input_data = tf.keras.utils.img_to_array(image).reshape(input_shape)
+    input_data = image.reshape(input_shape).astype(np.float32)
     interpreter.set_tensor(input_details[0]['index'], input_data)
     interpreter.invoke()
     output_data = interpreter.get_tensor(output_details[0]['index']).reshape(6, )
