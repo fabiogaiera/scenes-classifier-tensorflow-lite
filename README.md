@@ -7,7 +7,7 @@ Hereby I am going to show a simple example that includes the most important step
 
 And this is because my purpose is to show an example that can be shareable in a post with its known limitations.
 
-The application deployed in *[Heroku](https://awesome-classifier.herokuapp.com/)* available for final users is the outcome of the following steps:
+The application deployed in *[Heroku](https://img-classifier-tflite.herokuapp.com/)* available for final users is the outcome of the following steps:
 
 - Data Preprocessing
 - Model Development And Training
