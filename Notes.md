@@ -31,6 +31,5 @@ pip freeze > requirements.txt
 Once the environment is active, just execute `uvicorn main:app --reload`  
 
 **Some Heroku commands for troubleshooting**  
-heroku plugins:install heroku-builds  
 heroku logs --tail -a img-classifier-tflite     
 heroku run ls -R -a img-classifier-tflite  
