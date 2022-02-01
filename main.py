@@ -45,9 +45,9 @@ async def render_predictions(files: List[UploadFile] = File(...)):
 
     try:
         for file in files:
-        f = await file.read()
-        img = Image.open(io.BytesIO(f)).resize(new_size)
-        pillow_images.append(img)
+            f = await file.read()
+            img = Image.open(io.BytesIO(f)).resize(new_size)
+            pillow_images.append(img)
     except Exception:
         return html_open_tag + head_tag + body_center_open_tag + heading_exception_tag + form_prediction_tag + body_center_close_tag + html_close_tag
 
