@@ -43,11 +43,13 @@ async def render_predictions(files: List[UploadFile] = File(...)):
 
     new_size = (150, 150)
 
-    for file in files:
+    try:
+        for file in files:
         f = await file.read()
         img = Image.open(io.BytesIO(f)).resize(new_size)
         pillow_images.append(img)
-       
+    except Exception:
+        return html_open_tag + head_tag + body_center_open_tag + heading_exception_tag + form_prediction_tag + body_center_close_tag + html_close_tag
 
     names = [file.filename for file in files]
 
@@ -83,7 +85,7 @@ html_open_tag = """<html>"""
 
 head_tag = """<head><meta name="viewport" content="width=device-width, initial-scale=1"/></head>"""
 
-heading = """<h3 style="font-family:Arial">The application will try to predict which of these categories they are:</h3> """
+heading = """<h3 style="font-family:Arial">The application will try to predict which of these categories they are:</h3>"""
 
 body_center_open_tag = """<body><center>"""
 
@@ -103,6 +105,8 @@ html_close_tag = """</html>"""
 marquee_prediction_tag = """<marquee width="680" behavior="scroll"><h1 style="color:blue;font-family:Arial">The predictions are as follows</h1></marquee>"""
 
 form_prediction_tag = """<br><form method="post" action="/"><button type="submit">Home</button></form>"""
+
+heading_exception_tag = """<h3 style="font-family:Arial">Unable to process your request. Did you upload images?</h3>""" 
 
 # Dynamic tag
 
