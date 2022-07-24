@@ -1,4 +1,4 @@
-# Image Classification  
+# Scenes Classifier  
 
 Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. 
 
@@ -12,17 +12,17 @@ The application deployed in *[Heroku](https://scenes-classifier.herokuapp.com)* 
 - Data Preprocessing
 - Model Development And Training
 - Prediction On New Data
-- Model Deployment
+- Application Deployment
 
-## The dataset: 
+## The `dataset`: 
 
-I am going to use the so-called `Intel Image Classification`. I do not know certainly whether it belongs to Intel or not, however it is widely named like that in Kaggle and other sources.
+I am going to use the so-called `Intel Image Classification` dataset. I do not know certainly whether it belongs to Intel or not, however it is widely named like that in Kaggle and other sources.
 
 Some facts about the `dataset` folder on this repository:
 
 - It contains 6 categories: building, forest, glacier, mountain, sea and street.
 - Each element within this dataset is an image of 150px x 150px
-- There are 3 folders: test, validation and training. test folder contains 7300 images that can be used for testing the model with new data whereas training folder and validation folder are used during the model training.
+- There are 3 folders: test, validation and training. The test folder contains 7300 images that can be used for testing the model with new data whereas training folder and validation folder are used during the model creation.
 
 ## The `Model Creation` notebook
 
