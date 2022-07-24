@@ -7,7 +7,7 @@ Hereby I am going to show a simple example that includes the most important step
 
 And this is because my purpose is to show an example that can be shareable in a post with its known limitations.
 
-The application deployed in *[Heroku](https://img-classifier-tflite.herokuapp.com/)* available for final users is the outcome of the following steps:
+The application deployed in *[Heroku](https://scenes-classifier.herokuapp.com)* available for final users is the outcome of the following steps:
 
 - Data Preprocessing
 - Model Development And Training
@@ -54,7 +54,7 @@ You can see how to load a model built with TensorFlow Lite format and use it for
 
 Definitely FastAPI is a great framework for building web applications faster. So, I chose it for creating an app that allows you to upload and classify images within those 6 categories I mentioned before. The whole application is written in `main.py` file.
 
-## Deployment on Heroku
+## Deployment on `Heroku`
 
 Since I am using the **Free and Hobby** account, the main goal is to save space due its limitations. A way of doing that is using TensorFlow Lite, which helps saving significant space when installing libraries. I fully recommend to include the .slugignore file for saving space.
 
@@ -75,3 +75,5 @@ Since I am using the **Free and Hobby** account, the main goal is to save space 
 - [FastAPI documentation](https://fastapi.tiangolo.com)
 
 - [Heroku Dev Center](https://devcenter.heroku.com)
+
+- [Notes.md](https://github.com/fabiogaiera/scenes-classifier/blob/main/Notes.md)

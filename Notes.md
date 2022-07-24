@@ -30,6 +30,6 @@ pip freeze > requirements.txt
 **Start FastAPI application**  
 Once the environment is active, just execute `uvicorn main:app --reload`  
 
-**Some Heroku commands for troubleshooting**  
-heroku logs --tail -a img-classifier-tflite     
-heroku run ls -R -a img-classifier-tflite  
+**Heroku commands for troubleshooting**  
+heroku logs --tail -a scenes-classifier     
+heroku run ls -R -a scenes-classifier
