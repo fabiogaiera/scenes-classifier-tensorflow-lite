@@ -14,7 +14,7 @@ The application deployed in *[Heroku](https://scenes-classifier.herokuapp.com)* 
 - Prediction On New Data
 - Application Deployment
 
-## The dataset: 
+## The `dataset`: 
 
 I am going to use the so-called `Intel Image Classification` dataset. I do not know certainly whether it belongs to Intel or not, however it is widely named like that in Kaggle and other sources.
 
