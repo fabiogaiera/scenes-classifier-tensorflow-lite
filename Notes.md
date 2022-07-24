@@ -31,5 +31,9 @@ pip freeze > requirements.txt
 Once the environment is active, just execute `uvicorn main:app --reload`  
 
 **Heroku commands for troubleshooting**  
-heroku logs --tail -a scenes-classifier     
-heroku run ls -R -a scenes-classifier
+
+heroku login
+
+heroku run bash -a scenes-classifier
+
+heroku logs --tail -a scenes-classifier
