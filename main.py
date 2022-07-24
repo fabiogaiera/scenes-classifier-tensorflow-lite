@@ -56,6 +56,7 @@ async def render_predictions(files: List[UploadFile] = File(...)):
     for image, name in zip(pillow_images, names):
         path = 'static/' + name
         image.save(path)
+        print(path)
         image_paths.append(path)
         
         predicted_class = predict(image)
