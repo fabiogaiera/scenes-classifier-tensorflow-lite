@@ -3,5 +3,4 @@
 .tflite-env/
 __pycache__/
 SavedModel/
-
 .ipynb_checkpoints/
