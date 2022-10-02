@@ -1,14 +1,3 @@
-**Create environment for TensorFlow**  
-python -m venv .tf-env  
-
-**Activate the environment**   
-source .tf-env/bin/activate  
-
-**Install some dependencies**   
-pip install --upgrade pip  
-pip install tensorflow==2.6.0   
-pip install --upgrade keras==2.6.0   
-
 **Create environment for TensorFlow Lite**   
 python -m venv .tflite-env  
 
