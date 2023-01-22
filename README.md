@@ -58,7 +58,7 @@ Definitely FastAPI is a great framework for building web applications faster. So
 
 ## Deployment on `Heroku`
 
-Since I am using the **Free and Hobby** account, the main goal is to save space due its limitations. A way of doing that is using TensorFlow Lite, which helps saving significant space when installing libraries. I fully recommend to include the .slugignore file for saving space.
+Since I am using the **Eco and Basic** account, the main goal is to save space due its limitations. A way of doing that is using TensorFlow Lite, which helps saving significant space when installing libraries. I fully recommend to include the .slugignore file for saving space.
 
 ## Sources:
 
