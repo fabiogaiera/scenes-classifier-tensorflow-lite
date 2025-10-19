@@ -1,5 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # Scenes Classifier  
 
 Hereby I am going to show a simple example that includes the most important steps in the lifecycle of a Machine Learning project. 
